@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Crazyjackkong</title>
+  
+  <subtitle>疯赤子的个人博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://crazyjackkong.github.io/"/>
+  <updated>2018-03-17T04:50:55.258Z</updated>
+  <id>https://crazyjackkong.github.io/</id>
+  
+  <author>
+    <name>Crazyjackkong</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="https://crazyjackkong.github.io/2018/03/17/Hello-World/"/>
+    <id>https://crazyjackkong.github.io/2018/03/17/Hello-World/</id>
+    <published>2018-03-17T04:48:58.000Z</published>
+    <updated>2018-03-17T04:50:55.258Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里是crazyjackong的个人博客，开启于2018年3月17日。<br>欢迎各位客官！！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这里是crazyjackong的个人博客，开启于2018年3月17日。&lt;br&gt;欢迎各位客官！！&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
