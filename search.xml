@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title>Hello World!</title>
-      <link href="/post/1c291ca3.html"/>
-      <content type="html"><![CDATA[<p>这里是crazyjackong的个人博客，开启于2018年3月17日。<br>欢迎各位客官！！</p>]]></content>
-      
+<search>
+  <entry>
+    <title><![CDATA[Hello World!]]></title>
+    <url>%2Fpost%2F1c291ca3.html</url>
+    <content type="text"><![CDATA[这里是crazyjackong的个人博客，开启于2018年3月17日。欢迎各位客官！！]]></content>
       <categories>
-          
-          <category> 搭建博客 </category>
-          
+        <category>搭建博客</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 实验 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-  
-  
+      <tags>
+        <tag>实验</tag>
+      </tags>
+  </entry>
 </search>
