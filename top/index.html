@@ -142,17 +142,18 @@
 
 
 
-  <meta name="description" content="个人博客">
+  <meta name="description" content="AV.initialize(&quot;1nu1Bxm9VD3Tuyr9cDxlP2Hd-gzGzoHsz&quot;, &quot;S7knksvnH0VQld0I6oHGDkhf&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.d">
+<meta name="keywords" content="top,文章阅读量排行榜">
 <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://crazyjackkong.github.io/tags/index.html">
+<meta property="og:title" content="TopX &#x2F;* 可以不为 TopX，随便取 *&#x2F;">
+<meta property="og:url" content="https://crazyjackkong.github.io/top/index.html">
 <meta property="og:site_name" content="Crazyjackkong">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="AV.initialize(&quot;1nu1Bxm9VD3Tuyr9cDxlP2Hd-gzGzoHsz&quot;, &quot;S7knksvnH0VQld0I6oHGDkhf&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.d">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-18T01:56:01.032Z">
+<meta property="og:updated_time" content="2018-03-18T09:05:43.882Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:title" content="TopX &#x2F;* 可以不为 TopX，随便取 *&#x2F;">
+<meta name="twitter:description" content="AV.initialize(&quot;1nu1Bxm9VD3Tuyr9cDxlP2Hd-gzGzoHsz&quot;, &quot;S7knksvnH0VQld0I6oHGDkhf&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.d">
 
 
 
@@ -161,7 +162,7 @@
 
 
 
-  <link rel="canonical" href="https://crazyjackkong.github.io/tags/"/>
+  <link rel="canonical" href="https://crazyjackkong.github.io/top/"/>
 
 
 
@@ -171,7 +172,7 @@
   };
 </script>
 
-  <title>tags | Crazyjackkong</title>
+  <title>TopX /* 可以不为 TopX，随便取 */ | Crazyjackkong</title>
   
 
 
@@ -410,7 +411,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags</h1>
+<h1 class="post-title" itemprop="name headline">TopX /* 可以不为 TopX，随便取 */</h1>
 
 <div class="post-meta">
   
@@ -428,20 +429,30 @@
       <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                
-                
-                  
-                    
-                  
-                
-                目前共计 1 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/实验/" style="font-size: 12px; color: #ccc">实验</a>
-            </div>
-          </div>
+          <p><div id="top"></div></p>
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script>AV.initialize("1nu1Bxm9VD3Tuyr9cDxlP2Hd-gzGzoHsz", "S7knksvnH0VQld0I6oHGDkhf");</script>
+<script type="text/javascript">
+  var time=0
+  var title=""
+  var url=""
+  var query = new AV.Query('Counter');
+  query.notEqualTo('id',0);
+  query.descending('time');
+  query.limit(1000);
+  query.find().then(function (todo) {
+    for (var i=0;i<1000;i++){
+      var result=todo[i].attributes;
+      time=result.time;
+      title=result.title;
+      url=result.url;
+      var content="<a href='"+"https://reuixiy.github.io"+url+"'>"+title+"</a>"+"<br />"+"<font color='#555'>"+"阅读次数："+time+"</font>"+"<br /><br />";
+      document.getElementById("top").innerHTML+=content
+    }
+  }, function (error) {
+    console.log("error");
+  });
+</script>
         
       </div>
       
