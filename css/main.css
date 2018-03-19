@@ -2054,7 +2054,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #215513;
+  background: #ff033c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3042,7 +3042,7 @@ hr {
   padding-top: 0px;
 }
 .post-nav {
-  margin-top: 30px;
+  margin-top: 0px;
 }
 .post-nav-item a {
   color: #5073b8;
