@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://crazyjackkong.github.io/"/>
-  <updated>2018-03-18T09:05:56.404Z</updated>
+  <updated>2018-03-19T05:18:00.886Z</updated>
   <id>https://crazyjackkong.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《爱的艺术》</title>
+    <link href="https://crazyjackkong.github.io/post/1822a02.html"/>
+    <id>https://crazyjackkong.github.io/post/1822a02.html</id>
+    <published>2018-03-19T05:11:57.000Z</published>
+    <updated>2018-03-19T05:18:00.886Z</updated>
+    
+    <content type="html"><![CDATA[<p>toc: true<br>思维导图分享</p><iframe width="100%" height="100%" src="https://share.mindmanager.com/#publish/MiF-hUSYMNmVE_ToVHNt9LAm7WYhkC6dWtfgAZ7R"></iframe><a id="more"></a><hr>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;toc: true&lt;br&gt;思维导图分享&lt;/p&gt;
+&lt;iframe width=&quot;100%&quot; height=&quot;100%&quot; src=&quot;https://share.mindmanager.com/#publish/MiF-hUSYMNmVE_ToVHNt9LAm7WYhkC6dWtfgAZ7R&quot;&gt;&lt;/iframe&gt;
+    
+    </summary>
+    
+      <category term="思维导图" scheme="https://crazyjackkong.github.io/categories/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
+    
+    
+      <category term="思维导图" scheme="https://crazyjackkong.github.io/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World!</title>
