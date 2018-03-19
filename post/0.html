@@ -1,4 +1,518 @@
 <!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css" />
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.0.6">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="layout: false                                       @font-face{font-family:Comfortaa;font-style:normal;font-weight:300;src:local(&apos;Comfortaa Light&apos;),local(&apos;Comfortaa-Light&apos;),url(data:application/font-w">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Crazyjackkong">
+<meta property="og:url" content="https://crazyjackkong.github.io/post/0.html">
+<meta property="og:site_name" content="Crazyjackkong">
+<meta property="og:description" content="layout: false                                       @font-face{font-family:Comfortaa;font-style:normal;font-weight:300;src:local(&apos;Comfortaa Light&apos;),local(&apos;Comfortaa-Light&apos;),url(data:application/font-w">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://crazyjackkong.github.io/post/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTk0LjMzIDEwMS43MyI+DQogIDx0aXRsZT5tbS1sb2dvPC90aXRsZT4KICA8ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj4NCiAgICA8ZyBpZD0iTGF5ZXJfMS0yIiBkYXRhLW5hbWU9IkxheWVyIDEiPg0KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiBkPSJNMjEuOTMsOTUuOTFIMTkuNjZMMTkuODQsNzUsMTEuNzgsOTUuOTFoLTEuNkwyLDc1bC4yOCwyMC44OEgwVjcxLjI5SDIuNzVsOC4zMywyMC44OEwxOSw3MS4yOWgyLjg5WiIvPgogICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGZpbGw9IiMzYjUzYTQiIGQ9Ik0yNyw3NS4zN0gyNVY3Mi4yaDJabTAsMjAuNTRIMjVWNzkuMjdoMloiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiBkPSJNNDIuODQsOTUuOTFINDAuNzhWODcuMjljMC0zLjI0LDAtNC4xOC0uNjMtNS4wOWEzLjc4LDMuNzgsMCwwLDAtMy4yNC0xLjQzQTQuNDQsNC40NCwwLDAsMCwzMyw4Mi42NmMtMSwxLjM5LTEsMi40OC0xLDZ2Ny4yOUgyOS45NFY3OS4zMUgzMnYzYTUuMTQsNS4xNCwwLDAsMSw1LjItMy4zNSw1LjUxLDUuNTEsMCwwLDEsNC41MywyYzEuMDgsMS40MywxLjEyLDIuNzksMS4xMiw2LjM4WiIvPgogICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGZpbGw9IiMzYjUzYTQiIGQ9Ik01OS4wNyw5NS45MWgtMnYtM0E1LjIyLDUuMjIsMCwwLDEsNTIsOTYuMjljLTMuOTEsMC02Ljg3LTMuMzgtNi44Ny04LjcyczMuMjEtOC42NSw3LjE4LTguNjVhNC43OCw0Ljc4LDAsMCwxLDQuNzgsM1Y3MS4yOWgyWk01Niw4Mi41OWE0LjUsNC41LDAsMCwwLTMuNy0xLjc4Yy0zLjI4LDAtNSwyLjkzLTUsNi43NiwwLDIuNTEuNzcsNi43Niw1LDYuNzYsNC43OCwwLDQuODEtNS4wNiw0Ljg1LTYuNTlDNTcuMTYsODUuNDUsNTYuODQsODMuNyw1Niw4Mi41OVoiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiBkPSJNODUsNzEuMjlWOTUuOTFoLTQuNWwuNDItMjAuMjItNS4zLDIwLjIySDcxLjQ2TDY2LjEzLDc1LjY4bC40NSwyMC4yMmgtNC41VjcxLjI5aDYuNjlsNC44MSwxOC4yN0w3OC4zLDcxLjI5WiIvPgogICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGZpbGw9IiMzYjUzYTQiIGQ9Ik04Ny44Nyw4My42YTUuNjcsNS42NywwLDAsMSwuNy0yLjYxYzEuNjctMyw1LjgyLTMsNi45NC0zYTEwLjU4LDEwLjU4LDAsMCwxLDUuMjMsMS4xMmMyLjA2LDEuMjYsMi4wOSwyLjg5LDIuMDksNC43OHY5LjI0YTMuNjYsMy42NiwwLDAsMCwuNzcsMi44MmgtNWMwLS40Mi0uMS0xLjEyLS4xLTEuMzZhOC4yMSw4LjIxLDAsMCwxLTUuMTYsMS43OGMtMy45NCwwLTYuMzEtMi40NC02LjMxLTUuNDRhNS4yNyw1LjI3LDAsMCwxLC41Ni0yLjM3YzEuMjYtMi41MSwzLjk0LTMuMDcsNS42MS0zLjM4YTM5LjU4LDM5LjU4LDAsMCwwLDUuNC0xLjI5YzAtLjg3LS4wNy0yLjY1LTMtMi42NWEzLjcxLDMuNzEsMCwwLDAtMy4xLDEuMTIsMi4wOCwyLjA4LDAsMCwwLS40MiwxLjUzWm0xMC43NywzLjYzYTEyLjA2LDEyLjA2LDAsMCwxLTMuNjYsMWMtMS41LjIxLTMuNDkuNTYtMy40OSwyLjQxLDAsMS4zNiwxLjE1LDIuMDYsMi44MiwyLjA2LDIuMTMsMCwzLjYzLTEsNC4wOC0yYTMuNTMsMy41MywwLDAsMCwuMjQtMS41N1oiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiBkPSJNMTA1LjY4LDc4LjQ3aDQuMjJ2Mi4wNmE0Ljg2LDQuODYsMCwwLDEsMS4zNi0xLjM2LDcuMjUsNy4yNSwwLDAsMSw0LTEuMjJBNS43MSw1LjcxLDAsMCwxLDExOS44Myw4MGMxLjA4LDEuNDYsMS4wOCwzLjM1LDEuMDgsNS42MVY5NS45MWgtNC4xNVY4N2ExMi4zNiwxMi4zNiwwLDAsMC0uMTQtMi42NUEyLjg1LDIuODUsMCwwLDAsMTEzLjc3LDgyYTMuNjYsMy42NiwwLDAsMC0zLjIxLDIsMTAsMTAsMCwwLDAtLjY2LDQuMzZ2Ny41N2gtNC4yMloiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiBkPSJNMTIzLjcsODMuNmE1LjY3LDUuNjcsMCwwLDEsLjctMi42MWMxLjY3LTMsNS44Mi0zLDYuOTQtM2ExMC41OCwxMC41OCwwLDAsMSw1LjIzLDEuMTJjMi4wNiwxLjI2LDIuMDksMi44OSwyLjA5LDQuNzh2OS4yNGEzLjY2LDMuNjYsMCwwLDAsLjc3LDIuODJoLTVjMC0uNDItLjEtMS4xMi0uMS0xLjM2YTguMjEsOC4yMSwwLDAsMS01LjE2LDEuNzhjLTMuOTQsMC02LjMxLTIuNDQtNi4zMS01LjQ0YTUuMjksNS4yOSwwLDAsMSwuNTYtMi4zN2MxLjI2LTIuNTEsMy45NC0zLjA3LDUuNjEtMy4zOGEzOS41OCwzOS41OCwwLDAsMCw1LjQtMS4yOWMwLS44Ny0uMDctMi42NS0zLTIuNjVhMy43MSwzLjcxLDAsMCwwLTMuMSwxLjEyLDIuMDgsMi4wOCwwLDAsMC0uNDIsMS41M1ptMTAuNzcsMy42M2ExMi4wNiwxMi4wNiwwLDAsMS0zLjY2LDFjLTEuNS4yMS0zLjQ5LjU2LTMuNDksMi40MSwwLDEuMzYsMS4xNSwyLjA2LDIuODIsMi4wNiwyLjEzLDAsMy42My0xLDQuMDgtMmEzLjUzLDMuNTMsMCwwLDAsLjI0LTEuNTdaIi8+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZmlsbD0iIzNiNTNhNCIgZD0iTTE1OC4wNyw3OC40N3YxNC4zYzAsMy40NSwwLDQuODUtMS4xMiw2LjMxLTEsMS4yOS0zLjE0LDIuNjUtNy4yNSwyLjY1LTYuMjEsMC03LjQzLTIuNjgtOC01LjQ3aDQuNmMuMzEsMSwxLDIuMTYsMy41NiwyLjE2LDIuMTMsMCwzLjA3LS44NCwzLjQ1LTEuMzkuNjMtLjg3LjYzLTEuODguNjMtNGE3Ljc5LDcuNzksMCwwLDEtNS4yMywxLjg4Yy00LjExLDAtNy41Ny0yLjc5LTcuNTctOC4zMywwLTYuNDksNC42NC04LjYxLDcuODQtOC42MWE1Ljc2LDUuNzYsMCwwLDEsNSwyLjM0Vjc4LjQ3Wm0tOC4zNywzLjIxYy0yLjEzLDAtNC4yOSwxLjQzLTQuMjksNC43OCwwLDMsMS44NSw0LjYsNC4zMiw0LjYsMi4yMywwLDQuMjUtMS4yMiw0LjI5LTQuNDNDMTU0LjA3LDgzLjgxLDE1Mi41Myw4MS42OCwxNDkuNzEsODEuNjhaIi8+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZmlsbD0iIzNiNTNhNCIgZD0iTTE3Ny4zNSw5MmExMC4xNSwxMC4xNSwwLDAsMS04LjUxLDQuNDNjLTQuNTcsMC05LTIuODktOS05LjMxLDAtNS44NiwzLjc3LTkuMTcsOC42OC05LjE3YTcuODcsNy44NywwLDAsMSw2Ljg3LDMuMjhjMS40MywyLDEuNzQsNS4wNiwxLjc4LDYuOGgtMTIuOWMuNDksMi43NSwyLjIsNC4zMiw1LDQuMzJhNS4wOSw1LjA5LDAsMCwwLDQuNTMtMi40MVptLTQuNzQtN2MtLjM4LTIuNzItMi4wNi0zLjY2LTMuOTEtMy42NkE0LjEzLDQuMTMsMCwwLDAsMTY0LjQ1LDg1WiIvPgogICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGZpbGw9IiMzYjUzYTQiIGQ9Ik0xODMuMTksNzguNDd2Mi40OGMuNTItLjkxLDEuNjctMyw1LjU4LTIuODZ2NC4yOWE2LjM5LDYuMzksMCwwLDAtMy43NywxYy0xLjc4LDEuMzYtMS44MSwzLjE0LTEuODEsNnY2LjQ1aC00Vjc4LjQ3WiIvPgogICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGZpbGw9IiMzYjUzYTQiIGQ9Ik0xOTIuMDcsODIuMjVBMi4yNSwyLjI1LDAsMSwxLDE5NC4zMyw4MCwyLjIzLDIuMjMsMCwwLDEsMTkyLjA3LDgyLjI1Wm0wLTQuM2EyLDIsMCwxLDAsMiwyLjA1QTIsMiwwLDAsMCwxOTIuMDksNzhabTAsLjU5YTIuMjIsMi4yMiwwLDAsMSwuNjcuMDcuNy43LDAsMCwxLC40OS42OC43MS43MSwwLDAsMS0uNTQuNjhjLjE3LjA5LjMuMTYuMzYuNTdhMi42MywyLjYzLDAsMCwwLC4yMy44N2gtLjY5YTIuMTIsMi4xMiwwLDAsMS0uMTUtLjYzYy0uMDgtLjUyLS4xMS0uNjEtLjYtLjYyaC0uMTV2MS4yNGgtLjZWNzguNTVabS0uMzgsMS4xNEgxOTJjLjIyLDAsLjU4LDAsLjU4LS4zNWEuMzEuMzEsMCwwLDAtLjE4LS4yOWMtLjA5LDAtLjEzLDAtLjQ5LDBoLS4yN1oiLz4KICAgICAgPHJlY3QgY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiB4PSI1OS44MyIgd2lkdGg9IjU0LjQ4IiBoZWlnaHQ9IjUwLjU5Ii8+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZmlsbD0iI2ZmZiIgZD0iTTc4LjU0LDQxLjI0LDg3LjY5LDIyLDgxLjQ0LDkuMzhINzAuNjRjLS4zOSwwLS41OS4zOC0uNTkuOHYzMC4zYzAsLjU1LjIxLjgxLjY4LjgxSDc4LjUiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0zIiBmaWxsPSIjYThhYWFkIiBkPSJNODkuMTksMzkuMjJsLjk1LjA4LjIzLDAsMSwuMTQuMTgsMGMuMzMuMDYuNjYuMTMsMSwuMmwuMTMsMCwxLC4yNy4wOSwwYy4zNS4xLjY5LjIxLDEsLjMzbC4wOCwwYy4zNC4xMi42OC4yNSwxLC4zOWwuMDgsMGMuMzEuMTMuNjEuMjYuOTEuNDFsLTkuMTUtMTkuMkw3OC41NCw0MS4yNmgwYy4zMS0uMTUuNjMtLjI5LDEtLjQzbDAsMHEuNTItLjIyLDEtLjQxbDAsMGMuMzQtLjEyLjY5LS4yMywxLS4zNGwuMDgsMGMuMzQtLjEuNjgtLjE5LDEtLjI3bC4xMiwwLDEtLjIuMTgsMCwxLS4xNC4yMywwYy4zMiwwLC42NC0uMDYsMS0uMDhsLjI1LDBjLjQsMCwuODEsMCwxLjIzLDBzLjgyLDAsMS4yMywwbC4yNiwwIi8+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtNCIgZmlsbD0iI2QyZDNkNCIgZD0iTTk2Ljg0LDQxLjI0LDg3LjY5LDIyLDkzLjk0LDkuMzhoMTAuOGMuMzksMCwuNTkuMzguNTkuOHYzMC4zYzAsLjU1LS4yMS44MS0uNjguODFIOTYuOTFaIi8+CiAgICA8L2c+DQogIDwvZz4NCjwvc3ZnPg0K">
+<meta property="og:updated_time" content="2018-03-19T15:34:38.025Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Crazyjackkong">
+<meta name="twitter:description" content="layout: false                                       @font-face{font-family:Comfortaa;font-style:normal;font-weight:300;src:local(&apos;Comfortaa Light&apos;),local(&apos;Comfortaa-Light&apos;),url(data:application/font-w">
+<meta name="twitter:image" content="https://crazyjackkong.github.io/post/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTk0LjMzIDEwMS43MyI+DQogIDx0aXRsZT5tbS1sb2dvPC90aXRsZT4KICA8ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj4NCiAgICA8ZyBpZD0iTGF5ZXJfMS0yIiBkYXRhLW5hbWU9IkxheWVyIDEiPg0KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiBkPSJNMjEuOTMsOTUuOTFIMTkuNjZMMTkuODQsNzUsMTEuNzgsOTUuOTFoLTEuNkwyLDc1bC4yOCwyMC44OEgwVjcxLjI5SDIuNzVsOC4zMywyMC44OEwxOSw3MS4yOWgyLjg5WiIvPgogICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGZpbGw9IiMzYjUzYTQiIGQ9Ik0yNyw3NS4zN0gyNVY3Mi4yaDJabTAsMjAuNTRIMjVWNzkuMjdoMloiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiBkPSJNNDIuODQsOTUuOTFINDAuNzhWODcuMjljMC0zLjI0LDAtNC4xOC0uNjMtNS4wOWEzLjc4LDMuNzgsMCwwLDAtMy4yNC0xLjQzQTQuNDQsNC40NCwwLDAsMCwzMyw4Mi42NmMtMSwxLjM5LTEsMi40OC0xLDZ2Ny4yOUgyOS45NFY3OS4zMUgzMnYzYTUuMTQsNS4xNCwwLDAsMSw1LjItMy4zNSw1LjUxLDUuNTEsMCwwLDEsNC41MywyYzEuMDgsMS40MywxLjEyLDIuNzksMS4xMiw2LjM4WiIvPgogICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGZpbGw9IiMzYjUzYTQiIGQ9Ik01OS4wNyw5NS45MWgtMnYtM0E1LjIyLDUuMjIsMCwwLDEsNTIsOTYuMjljLTMuOTEsMC02Ljg3LTMuMzgtNi44Ny04LjcyczMuMjEtOC42NSw3LjE4LTguNjVhNC43OCw0Ljc4LDAsMCwxLDQuNzgsM1Y3MS4yOWgyWk01Niw4Mi41OWE0LjUsNC41LDAsMCwwLTMuNy0xLjc4Yy0zLjI4LDAtNSwyLjkzLTUsNi43NiwwLDIuNTEuNzcsNi43Niw1LDYuNzYsNC43OCwwLDQuODEtNS4wNiw0Ljg1LTYuNTlDNTcuMTYsODUuNDUsNTYuODQsODMuNyw1Niw4Mi41OVoiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiBkPSJNODUsNzEuMjlWOTUuOTFoLTQuNWwuNDItMjAuMjItNS4zLDIwLjIySDcxLjQ2TDY2LjEzLDc1LjY4bC40NSwyMC4yMmgtNC41VjcxLjI5aDYuNjlsNC44MSwxOC4yN0w3OC4zLDcxLjI5WiIvPgogICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGZpbGw9IiMzYjUzYTQiIGQ9Ik04Ny44Nyw4My42YTUuNjcsNS42NywwLDAsMSwuNy0yLjYxYzEuNjctMyw1LjgyLTMsNi45NC0zYTEwLjU4LDEwLjU4LDAsMCwxLDUuMjMsMS4xMmMyLjA2LDEuMjYsMi4wOSwyLjg5LDIuMDksNC43OHY5LjI0YTMuNjYsMy42NiwwLDAsMCwuNzcsMi44MmgtNWMwLS40Mi0uMS0xLjEyLS4xLTEuMzZhOC4yMSw4LjIxLDAsMCwxLTUuMTYsMS43OGMtMy45NCwwLTYuMzEtMi40NC02LjMxLTUuNDRhNS4yNyw1LjI3LDAsMCwxLC41Ni0yLjM3YzEuMjYtMi41MSwzLjk0LTMuMDcsNS42MS0zLjM4YTM5LjU4LDM5LjU4LDAsMCwwLDUuNC0xLjI5YzAtLjg3LS4wNy0yLjY1LTMtMi42NWEzLjcxLDMuNzEsMCwwLDAtMy4xLDEuMTIsMi4wOCwyLjA4LDAsMCwwLS40MiwxLjUzWm0xMC43NywzLjYzYTEyLjA2LDEyLjA2LDAsMCwxLTMuNjYsMWMtMS41LjIxLTMuNDkuNTYtMy40OSwyLjQxLDAsMS4zNiwxLjE1LDIuMDYsMi44MiwyLjA2LDIuMTMsMCwzLjYzLTEsNC4wOC0yYTMuNTMsMy41MywwLDAsMCwuMjQtMS41N1oiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiBkPSJNMTA1LjY4LDc4LjQ3aDQuMjJ2Mi4wNmE0Ljg2LDQuODYsMCwwLDEsMS4zNi0xLjM2LDcuMjUsNy4yNSwwLDAsMSw0LTEuMjJBNS43MSw1LjcxLDAsMCwxLDExOS44Myw4MGMxLjA4LDEuNDYsMS4wOCwzLjM1LDEuMDgsNS42MVY5NS45MWgtNC4xNVY4N2ExMi4zNiwxMi4zNiwwLDAsMC0uMTQtMi42NUEyLjg1LDIuODUsMCwwLDAsMTEzLjc3LDgyYTMuNjYsMy42NiwwLDAsMC0zLjIxLDIsMTAsMTAsMCwwLDAtLjY2LDQuMzZ2Ny41N2gtNC4yMloiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiBkPSJNMTIzLjcsODMuNmE1LjY3LDUuNjcsMCwwLDEsLjctMi42MWMxLjY3LTMsNS44Mi0zLDYuOTQtM2ExMC41OCwxMC41OCwwLDAsMSw1LjIzLDEuMTJjMi4wNiwxLjI2LDIuMDksMi44OSwyLjA5LDQuNzh2OS4yNGEzLjY2LDMuNjYsMCwwLDAsLjc3LDIuODJoLTVjMC0uNDItLjEtMS4xMi0uMS0xLjM2YTguMjEsOC4yMSwwLDAsMS01LjE2LDEuNzhjLTMuOTQsMC02LjMxLTIuNDQtNi4zMS01LjQ0YTUuMjksNS4yOSwwLDAsMSwuNTYtMi4zN2MxLjI2LTIuNTEsMy45NC0zLjA3LDUuNjEtMy4zOGEzOS41OCwzOS41OCwwLDAsMCw1LjQtMS4yOWMwLS44Ny0uMDctMi42NS0zLTIuNjVhMy43MSwzLjcxLDAsMCwwLTMuMSwxLjEyLDIuMDgsMi4wOCwwLDAsMC0uNDIsMS41M1ptMTAuNzcsMy42M2ExMi4wNiwxMi4wNiwwLDAsMS0zLjY2LDFjLTEuNS4yMS0zLjQ5LjU2LTMuNDksMi40MSwwLDEuMzYsMS4xNSwyLjA2LDIuODIsMi4wNiwyLjEzLDAsMy42My0xLDQuMDgtMmEzLjUzLDMuNTMsMCwwLDAsLjI0LTEuNTdaIi8+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZmlsbD0iIzNiNTNhNCIgZD0iTTE1OC4wNyw3OC40N3YxNC4zYzAsMy40NSwwLDQuODUtMS4xMiw2LjMxLTEsMS4yOS0zLjE0LDIuNjUtNy4yNSwyLjY1LTYuMjEsMC03LjQzLTIuNjgtOC01LjQ3aDQuNmMuMzEsMSwxLDIuMTYsMy41NiwyLjE2LDIuMTMsMCwzLjA3LS44NCwzLjQ1LTEuMzkuNjMtLjg3LjYzLTEuODguNjMtNGE3Ljc5LDcuNzksMCwwLDEtNS4yMywxLjg4Yy00LjExLDAtNy41Ny0yLjc5LTcuNTctOC4zMywwLTYuNDksNC42NC04LjYxLDcuODQtOC42MWE1Ljc2LDUuNzYsMCwwLDEsNSwyLjM0Vjc4LjQ3Wm0tOC4zNywzLjIxYy0yLjEzLDAtNC4yOSwxLjQzLTQuMjksNC43OCwwLDMsMS44NSw0LjYsNC4zMiw0LjYsMi4yMywwLDQuMjUtMS4yMiw0LjI5LTQuNDNDMTU0LjA3LDgzLjgxLDE1Mi41Myw4MS42OCwxNDkuNzEsODEuNjhaIi8+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZmlsbD0iIzNiNTNhNCIgZD0iTTE3Ny4zNSw5MmExMC4xNSwxMC4xNSwwLDAsMS04LjUxLDQuNDNjLTQuNTcsMC05LTIuODktOS05LjMxLDAtNS44NiwzLjc3LTkuMTcsOC42OC05LjE3YTcuODcsNy44NywwLDAsMSw2Ljg3LDMuMjhjMS40MywyLDEuNzQsNS4wNiwxLjc4LDYuOGgtMTIuOWMuNDksMi43NSwyLjIsNC4zMiw1LDQuMzJhNS4wOSw1LjA5LDAsMCwwLDQuNTMtMi40MVptLTQuNzQtN2MtLjM4LTIuNzItMi4wNi0zLjY2LTMuOTEtMy42NkE0LjEzLDQuMTMsMCwwLDAsMTY0LjQ1LDg1WiIvPgogICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGZpbGw9IiMzYjUzYTQiIGQ9Ik0xODMuMTksNzguNDd2Mi40OGMuNTItLjkxLDEuNjctMyw1LjU4LTIuODZ2NC4yOWE2LjM5LDYuMzksMCwwLDAtMy43NywxYy0xLjc4LDEuMzYtMS44MSwzLjE0LTEuODEsNnY2LjQ1aC00Vjc4LjQ3WiIvPgogICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGZpbGw9IiMzYjUzYTQiIGQ9Ik0xOTIuMDcsODIuMjVBMi4yNSwyLjI1LDAsMSwxLDE5NC4zMyw4MCwyLjIzLDIuMjMsMCwwLDEsMTkyLjA3LDgyLjI1Wm0wLTQuM2EyLDIsMCwxLDAsMiwyLjA1QTIsMiwwLDAsMCwxOTIuMDksNzhabTAsLjU5YTIuMjIsMi4yMiwwLDAsMSwuNjcuMDcuNy43LDAsMCwxLC40OS42OC43MS43MSwwLDAsMS0uNTQuNjhjLjE3LjA5LjMuMTYuMzYuNTdhMi42MywyLjYzLDAsMCwwLC4yMy44N2gtLjY5YTIuMTIsMi4xMiwwLDAsMS0uMTUtLjYzYy0uMDgtLjUyLS4xMS0uNjEtLjYtLjYyaC0uMTV2MS4yNGgtLjZWNzguNTVabS0uMzgsMS4xNEgxOTJjLjIyLDAsLjU4LDAsLjU4LS4zNWEuMzEuMzEsMCwwLDAtLjE4LS4yOWMtLjA5LDAtLjEzLDAtLjQ5LDBoLS4yN1oiLz4KICAgICAgPHJlY3QgY2xhc3M9ImNscy0xIiBmaWxsPSIjM2I1M2E0IiB4PSI1OS44MyIgd2lkdGg9IjU0LjQ4IiBoZWlnaHQ9IjUwLjU5Ii8+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZmlsbD0iI2ZmZiIgZD0iTTc4LjU0LDQxLjI0LDg3LjY5LDIyLDgxLjQ0LDkuMzhINzAuNjRjLS4zOSwwLS41OS4zOC0uNTkuOHYzMC4zYzAsLjU1LjIxLjgxLjY4LjgxSDc4LjUiLz4KICAgICAgPHBhdGggY2xhc3M9ImNscy0zIiBmaWxsPSIjYThhYWFkIiBkPSJNODkuMTksMzkuMjJsLjk1LjA4LjIzLDAsMSwuMTQuMTgsMGMuMzMuMDYuNjYuMTMsMSwuMmwuMTMsMCwxLC4yNy4wOSwwYy4zNS4xLjY5LjIxLDEsLjMzbC4wOCwwYy4zNC4xMi42OC4yNSwxLC4zOWwuMDgsMGMuMzEuMTMuNjEuMjYuOTEuNDFsLTkuMTUtMTkuMkw3OC41NCw0MS4yNmgwYy4zMS0uMTUuNjMtLjI5LDEtLjQzbDAsMHEuNTItLjIyLDEtLjQxbDAsMGMuMzQtLjEyLjY5LS4yMywxLS4zNGwuMDgsMGMuMzQtLjEuNjgtLjE5LDEtLjI3bC4xMiwwLDEtLjIuMTgsMCwxLS4xNC4yMywwYy4zMiwwLC42NC0uMDYsMS0uMDhsLjI1LDBjLjQsMCwuODEsMCwxLjIzLDBzLjgyLDAsMS4yMywwbC4yNiwwIi8+CiAgICAgIDxwYXRoIGNsYXNzPSJjbHMtNCIgZmlsbD0iI2QyZDNkNCIgZD0iTTk2Ljg0LDQxLjI0LDg3LjY5LDIyLDkzLjk0LDkuMzhoMTAuOGMuMzksMCwuNTkuMzguNTkuOHYzMC4zYzAsLjU1LS4yMS44MS0uNjguODFIOTYuOTFaIi8+CiAgICA8L2c+DQogIDwvZz4NCjwvc3ZnPg0K">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Crazyjackkong" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="https://crazyjackkong.github.io/post/0.html"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title> | Crazyjackkong</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+
+
+
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+
+  <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/4376f8e2.js","daovoice")</script>
+
+	
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Crazyjackkong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">疯赤子的个人博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+</li>
+
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://crazyjackkong.github.io/post/0.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Crazyjackkong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Crazyjackkong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-19T23:24:39+08:00">2018-03-19</time>
+            
+
+            
+            
+              
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">2032k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">33:52</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        layout: false
+<!DOCTYPE html>
 <!-- saved from url=(0014)about:internet -->
 <html>
 <head>
@@ -51,3 +565,836 @@
 
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":"wanko","bottom":-30});</script></body>
 </html>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat-qcode.png" alt="Crazyjackkong 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+	<div>
+      
+        
+      
+</div>
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/1822a02.html" rel="next" title="《爱的艺术》思维导图">
+                <i class="fa fa-chevron-left"></i> 《爱的艺术》思维导图
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDkzNS8xMTQ3Mg=="></div>
+    </div>
+
+  
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "4376f8e2"
+    });
+  daovoice('update');
+  </script>
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="Crazyjackkong" />
+            
+              <p class="site-author-name" itemprop="name">Crazyjackkong</p>
+              <p class="site-description motion-element" itemprop="description">Crazyjackkong的个人博客</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:crazyjackkong@foxmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2821208874&website=www.oicqzone.com" target="_blank" title="QQ"><i class="fa fa-fw fa-qq"></i>QQ</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Crazyjackkong</span>
+
+  
+
+  
+</div>
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+您是本站的第 <span id="busuanzi_value_site_uv"></span> 个小伙伴  
+    |    总访问量 <span id="busuanzi_value_site_pv">|</span> 次
+<br />
+
+
+<span id="showDays"></span>
+<script>
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var years = days * 365;
+  var birthDay = Date.UTC(2018,03,17,00,00,00); // 这里设置建站时间
+  setInterval(function() {
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var now = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = now - birthDay;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById('showDays').innerHTML="本站已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+  }, 1000);
+</script>
+<br />
+<div class="theme-info">
+  <span class="post-count">    博客全站共 1.5k 字</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1273019081&web_id=1273019081" language="JavaScript"></script>
+  </div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('-1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":"wanko","bottom":-30});</script></body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
