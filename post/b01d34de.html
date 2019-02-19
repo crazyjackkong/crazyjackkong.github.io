@@ -146,7 +146,7 @@
 <meta property="og:site_name" content="Crazyjackkong">
 <meta property="og:description" content="Linux 源码安装及卸载1. 源码的安装源码安装的步骤大致分为四步：下载（download）、配置（configure）、编译（make）、安装（make install）。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-19T15:20:24.370Z">
+<meta property="og:updated_time" content="2019-02-19T15:26:52.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 源码安装及卸载">
 <meta name="twitter:description" content="Linux 源码安装及卸载1. 源码的安装源码安装的步骤大致分为四步：下载（download）、配置（configure）、编译（make）、安装（make install）。">
@@ -548,24 +548,14 @@
 <li><p>配置</p>
 <p><strong>在源码目录执行<code>./configure --prefix=PATH  #PATH为自定义安装目录</code></strong></p>
 <p> configure文件是一个可执行的脚本文件，它有很多选项，在待安装的源码目录下使用命令./configure –help可以输出详细的选项列表。</p>
+<p>其中–prefix选项是配置安装目录，如果不配置该选项，安装后可执行文件默认放在/usr  /local/bin，库文件默认放在/usr/local/lib，配置文件默认放在/usr/local/etc，其它的资源文件放在/usr  /local/share，比较凌乱。</p>
+<p>如果配置了–prefix，如：</p>
+<p><code>$ ./configure --prefix=/usr/local/test</code></p>
+<p>安装后的所有资源文件都会被放在/usr/local/test目录中，不会分散到其他目录。</p>
+<p>使用–prefix选项的另一个好处是方便卸载软件或移植软件；当某个安装的软件不再需要时，只须简单的删除该安装目录，就可以把软件卸载得干干净净；而移植软件只需拷贝整个目录到另外一个机器即可（相同的操作系统下）。</p>
 </li>
 </ol>
-<pre><code>其中--prefix选项是配置安装目录，如果不配置该选项，安装后可执行文件默认放在/usr  /local/bin，库文件默认放在/usr/local/lib，配置文件默认放在/usr/local/etc，其它的资源文件放在/usr  /local/share，比较凌乱。
-
-
-
-如果配置了--prefix，如：
-
-$ ./configure --prefix=/usr/local/test
-
-
-
-安装后的所有资源文件都会被放在/usr/local/test目录中，不会分散到其他目录。
-
-
-
-使用--prefix选项的另一个好处是方便卸载软件或移植软件；当某个安装的软件不再需要时，只须简单的删除该安装目录，就可以把软件卸载得干干净净；而移植软件只需拷贝整个目录到另外一个机器即可（相同的操作系统下）。
-</code></pre><p>   综上：<strong>强烈建议配置 <code>--prefix</code>方便后期移植及卸载</strong></p>
+<p>   综上：<strong>强烈建议配置 <code>--prefix</code>方便后期移植及卸载</strong></p>
 <ol>
 <li><p>编译</p>
 <p><strong>执行<code>make</code></strong></p>
@@ -584,7 +574,7 @@ $ ./configure --prefix=/usr/local/test
 <li><p>如果源码包提供了make uninstall ，则可以通过在源码目录下执行<code>make uninstall</code>命令卸载</p>
 </li>
 <li><p>如果没有配置–prefix选项，源码包也没有提供make uninstall，则可以通过以下方式可以完整卸载：  </p>
-<p>找一个临时目录重新安装一遍，如：<br><code>$ ./configure --prefix=/tmp/to_remove &amp;&amp; make install</code></p>
+<p>找一个临时目录重新安装一遍，如：<br>  <code>$ ./configure --prefix=/tmp/to_remove &amp;&amp; make install</code></p>
 <p>然后遍历/tmp/to_remove的文件，删除对应安装位置的文件即可（因为/tmp/to_remove里的目录结构就是没有配置–prefix选项时的目录结构）。</p>
 </li>
 </ol>
