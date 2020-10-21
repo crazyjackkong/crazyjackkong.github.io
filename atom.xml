@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://crazyjackkong.github.io/"/>
-  <updated>2019-02-19T15:39:35.060Z</updated>
+  <updated>2020-10-21T08:18:05.821Z</updated>
   <id>https://crazyjackkong.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>监督学习和无监督学习</title>
+    <link href="https://crazyjackkong.github.io/post/62c7e70.html"/>
+    <id>https://crazyjackkong.github.io/post/62c7e70.html</id>
+    <published>2020-10-21T08:15:17.982Z</published>
+    <updated>2020-10-21T08:18:05.821Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>是否有监督（supervised），就看输入数据是否有标签（label）。输入数据有标签，则为有监督学习，没标签则为无监督学习</strong><br><a id="more"></a><br>这里我参考网络资料将机器学习分为；有监督学习、无监督学习、半监督学习和强化学习四类。</p><h1 id="有监督学习"><a href="#有监督学习" class="headerlink" title="有监督学习"></a>有监督学习</h1><ol><li><p>分类（classification）：<br>输入的训练数据有特征（feature），有标签（label）。<br>所谓的学习，其本质就是<strong>找到特征和标签间的关系（mapping）</strong>。从而给定新的特征，得出器相应的分类结果即标签。</p></li><li><p>回归（regression）：<br>其数据集是给定一个函数和它的一些坐标点，然后通过回归分析的算法，来估计原函数的模型，<strong>求出一个最符合这些已知数据集的函数，从而预测未知输入的输出值</strong>。</p></li></ol><p>分类和回归的主要区别就是输出结果是离散的还是连续的。</p><h1 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h1><p>聚类：把相似的东西聚在一起，并不需要知道类别是什么<br><strong>训练数据是无标签的，训练目标是能对数据进行区分和界定</strong></p><h1 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h1><p>是监督学习与无监督学习相结合的一种学习方法。半监督学习使用大量的未标记数据，以及同时使用标记数据，来进行模式识别工作。</p><p>它主要考虑如何<strong>利用少量的标注样本和大量的未标注样本进行训练和分类</strong>的问题。主要分为半监督分类，半监督回归，半监督聚类和半监督降维算法。</p><h1 id="强化学习（reinforcement-learning）"><a href="#强化学习（reinforcement-learning）" class="headerlink" title="强化学习（reinforcement learning）"></a>强化学习（reinforcement learning）</h1><p>摘自：<a href="https://easyai.tech/ai-definition/reinforcement-learning/" target="_blank" rel="noopener">https://easyai.tech/ai-definition/reinforcement-learning/</a><br>强化学习算法的思路非常简单，以游戏为例，如果在游戏中采取某种策略可以取得较高的得分，那么就进一步「强化」这种策略，以期继续取得较好的结果。这种策略与日常生活中的各种「绩效奖励」非常类似。我们平时也常常用这样的策略来提高自己的游戏水平。</p><p>在 Flappy bird 这个游戏中，我们需要简单的点击操作来控制小鸟，躲过各种水管，飞的越远越好，因为飞的越远就能获得更高的积分奖励。</p><p>这就是一个典型的强化学习场景：</p><pre><code>机器有一个明确的小鸟角色——代理需要控制小鸟飞的更远——目标整个游戏过程中需要躲避各种水管——环境躲避水管的方法是让小鸟用力飞一下——行动飞的越远，就会获得越多的积分——奖励</code></pre><p>强化学习和监督学习、无监督学习 最大的不同就是不需要大量的“数据喂养”。而是<strong>通过自己不停的尝试来学会某些技能。</strong></p><pre><code>参考https://www.zhihu.com/question/23194489https://easyai.tech/ai-definition/如reinforcement-learning</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;是否有监督（supervised），就看输入数据是否有标签（label）。输入数据有标签，则为有监督学习，没标签则为无监督学习&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="https://crazyjackkong.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="笔记" scheme="https://crazyjackkong.github.io/categories/%E7%AE%97%E6%B3%95/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="DL" scheme="https://crazyjackkong.github.io/tags/DL/"/>
+    
+      <category term="笔记" scheme="https://crazyjackkong.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机3级考试嵌入式系统开发技术知识点总结（转载）</title>
