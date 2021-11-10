@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[HEXO命令]]></title>
     <url>%2Fpost%2Ff3f4fea1.html</url>
-    <content type="text"><![CDATA[方便查阅 指令说明:常用缩写命令hexo n “篇文章” 等价于 hexo new “文章”hexo g 等价于 hexo generate 生成静态网页hexo p 等价于 hexo publishhexo d 等价于 hexo deploy 将本地数据部署到远端服务器(如github)hexo g -d等价于hexo generate –deployhexo s 等价于 hexo server Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。 其他hexo server -s 以静态模式启动hexo server -p 5000 更改访问端口 (默认端口为4000，’ctrl + c’关闭server)hexo server -i IP地址 自定义 IPhexo deploy -g 等价于 hexo deploy –generatehexo clean 清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹npm update hexo -g升级hexo -v 查看hexo版本号]]></content>
+    <content type="text"><![CDATA[方便查阅 指令说明:常用缩写命令hexo n “篇文章” 等价于 hexo new “文章”hexo g 等价于 hexo generate 生成静态网页hexo p 等价于 hexo publishhexo d 等价于 hexo deploy 将本地数据部署到远端服务器(如github)hexo generate -d等价于hexo generate –deployhexo s 等价于 hexo server Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。 其他hexo server -s 以静态模式启动hexo server -p 5000 更改访问端口 (默认端口为4000，’ctrl + c’关闭server)hexo server -i IP地址 自定义 IPhexo deploy -g 等价于 hexo deploy –generatehexo clean 清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹npm update hexo -g升级hexo -v 查看hexo版本号]]></content>
   </entry>
   <entry>
     <title><![CDATA[git 笔记]]></title>
@@ -26,8 +26,8 @@
       </categories>
       <tags>
         <tag>实验</tag>
-        <tag>笔记</tag>
         <tag>DL</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -40,8 +40,8 @@
       </categories>
       <tags>
         <tag>实验</tag>
-        <tag>笔记</tag>
         <tag>DL</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -53,8 +53,8 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>DL</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
