@@ -23,6 +23,69 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux 源码安装及卸载</title>
+    <url>/post/b01d34de.html</url>
+    <content><![CDATA[<h2 id="1-源码的安装"><a href="#1-源码的安装" class="headerlink" title="1. 源码的安装"></a>1. 源码的安装</h2><p>源码安装的步骤大致分为四步：下载（download）、配置（configure）、编译（make）、安装（make install）。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>下载</p>
+<p>下载源码的方式有许多，记录使用过的几个</p>
+<ol>
+<li><p>git 下载，已知源码的 github 地址可以执行</p>
+<p><code>git clone 地址</code></p>
+<p>下载，可以直接将源码文件夹下载至本地。</p>
+</li>
+<li><p>直接自行下载源码的压缩包，并解压</p>
+<p>eg以<code>.tar</code>后缀的可以用<code>tar -xzf</code>命令解压</p>
+</li>
+<li><p>wget 下载：支持FTP及HTTP协议下载支持断点续传及代理服务器下载</p>
+</li>
+</ol>
+</li>
+<li><p>配置</p>
+<p><strong>在源码目录执行<code>./configure --prefix=PATH  #PATH为自定义安装目录</code></strong></p>
+<p>configure文件是一个可执行的脚本文件，它有很多选项，在待安装的源码目录下使用命令.&#x2F;configure –help可以输出详细的选项列表。</p>
+<p>其中–prefix选项是配置安装目录，如果不配置该选项，安装后可执行文件默认放在&#x2F;usr  &#x2F;local&#x2F;bin，库文件默认放在&#x2F;usr&#x2F;local&#x2F;lib，配置文件默认放在&#x2F;usr&#x2F;local&#x2F;etc，其它的资源文件放在&#x2F;usr  &#x2F;local&#x2F;share，比较凌乱。</p>
+<p>如果配置了–prefix，如：</p>
+<p><code>$ ./configure --prefix=/usr/local/test</code></p>
+<p>安装后的所有资源文件都会被放在&#x2F;usr&#x2F;local&#x2F;test目录中，不会分散到其他目录。</p>
+<p>使用–prefix选项的另一个好处是方便卸载软件或移植软件；当某个安装的软件不再需要时，只须简单的删除该安装目录，就可以把软件卸载得干干净净；而移植软件只需拷贝整个目录到另外一个机器即可（相同的操作系统下）。</p>
+<p>综上：**强烈建议配置 <code>--prefix</code>方便后期移植及卸载</p>
+</li>
+<li><p>编译</p>
+<p><strong>执行<code>make</code></strong></p>
+</li>
+<li><p>安装</p>
+<p>**执行&#96;make install</p>
+<p>为了记录安装详情方便后期，可输出安装日志，具体命令如下</p>
+<p>make &gt;&amp; LOG_make &amp;<br>make install &gt;&amp; LOG_install &amp;</p>
+</li>
+</ol>
+<h2 id="2-通过源码安装软件的卸载"><a href="#2-通过源码安装软件的卸载" class="headerlink" title="2. 通过源码安装软件的卸载"></a>2. 通过源码安装软件的卸载</h2><ol>
+<li><p>如果configure时配置了 –prefix 则可以直接通过rm</p>
+</li>
+<li><p>如果源码包提供了make uninstall ，则可以通过在源码目录下执行<code>make uninstall</code>命令卸载</p>
+</li>
+<li><p>如果没有配置–prefix选项，源码包也没有提供make uninstall，则可以通过以下方式可以完整卸载：  </p>
+<p>找一个临时目录重新安装一遍，如：<br>  <code>$ ./configure --prefix=/tmp/to_remove &amp;&amp; make install</code></p>
+<p>然后遍历&#x2F;tmp&#x2F;to_remove的文件，删除对应安装位置的文件即可（因为&#x2F;tmp&#x2F;to_remove里的目录结构就是没有配置–prefix选项时的目录结构）。</p>
+</li>
+</ol>
+<blockquote>
+<p>参考地址：</p>
+<p><a href="https://blog.csdn.net/u011334621/article/details/78506404">https://blog.csdn.net/u011334621/article/details/78506404</a></p>
+<p><a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Yolo_v1代码分析</title>
     <url>/post/1a124b91.html</url>
     <content><![CDATA[<p>Yolo_v1代码分析</p>
@@ -158,69 +221,6 @@
         <tag>实验</tag>
         <tag>DL</tag>
         <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux 源码安装及卸载</title>
-    <url>/post/b01d34de.html</url>
-    <content><![CDATA[<h2 id="1-源码的安装"><a href="#1-源码的安装" class="headerlink" title="1. 源码的安装"></a>1. 源码的安装</h2><p>源码安装的步骤大致分为四步：下载（download）、配置（configure）、编译（make）、安装（make install）。</p>
-<span id="more"></span>
-
-<ol>
-<li><p>下载</p>
-<p>下载源码的方式有许多，记录使用过的几个</p>
-<ol>
-<li><p>git 下载，已知源码的 github 地址可以执行</p>
-<p><code>git clone 地址</code></p>
-<p>下载，可以直接将源码文件夹下载至本地。</p>
-</li>
-<li><p>直接自行下载源码的压缩包，并解压</p>
-<p>eg以<code>.tar</code>后缀的可以用<code>tar -xzf</code>命令解压</p>
-</li>
-<li><p>wget 下载：支持FTP及HTTP协议下载支持断点续传及代理服务器下载</p>
-</li>
-</ol>
-</li>
-<li><p>配置</p>
-<p><strong>在源码目录执行<code>./configure --prefix=PATH  #PATH为自定义安装目录</code></strong></p>
-<p>configure文件是一个可执行的脚本文件，它有很多选项，在待安装的源码目录下使用命令.&#x2F;configure –help可以输出详细的选项列表。</p>
-<p>其中–prefix选项是配置安装目录，如果不配置该选项，安装后可执行文件默认放在&#x2F;usr  &#x2F;local&#x2F;bin，库文件默认放在&#x2F;usr&#x2F;local&#x2F;lib，配置文件默认放在&#x2F;usr&#x2F;local&#x2F;etc，其它的资源文件放在&#x2F;usr  &#x2F;local&#x2F;share，比较凌乱。</p>
-<p>如果配置了–prefix，如：</p>
-<p><code>$ ./configure --prefix=/usr/local/test</code></p>
-<p>安装后的所有资源文件都会被放在&#x2F;usr&#x2F;local&#x2F;test目录中，不会分散到其他目录。</p>
-<p>使用–prefix选项的另一个好处是方便卸载软件或移植软件；当某个安装的软件不再需要时，只须简单的删除该安装目录，就可以把软件卸载得干干净净；而移植软件只需拷贝整个目录到另外一个机器即可（相同的操作系统下）。</p>
-<p>综上：**强烈建议配置 <code>--prefix</code>方便后期移植及卸载</p>
-</li>
-<li><p>编译</p>
-<p><strong>执行<code>make</code></strong></p>
-</li>
-<li><p>安装</p>
-<p>**执行&#96;make install</p>
-<p>为了记录安装详情方便后期，可输出安装日志，具体命令如下</p>
-<p>make &gt;&amp; LOG_make &amp;<br>make install &gt;&amp; LOG_install &amp;</p>
-</li>
-</ol>
-<h2 id="2-通过源码安装软件的卸载"><a href="#2-通过源码安装软件的卸载" class="headerlink" title="2. 通过源码安装软件的卸载"></a>2. 通过源码安装软件的卸载</h2><ol>
-<li><p>如果configure时配置了 –prefix 则可以直接通过rm</p>
-</li>
-<li><p>如果源码包提供了make uninstall ，则可以通过在源码目录下执行<code>make uninstall</code>命令卸载</p>
-</li>
-<li><p>如果没有配置–prefix选项，源码包也没有提供make uninstall，则可以通过以下方式可以完整卸载：  </p>
-<p>找一个临时目录重新安装一遍，如：<br>  <code>$ ./configure --prefix=/tmp/to_remove &amp;&amp; make install</code></p>
-<p>然后遍历&#x2F;tmp&#x2F;to_remove的文件，删除对应安装位置的文件即可（因为&#x2F;tmp&#x2F;to_remove里的目录结构就是没有配置–prefix选项时的目录结构）。</p>
-</li>
-</ol>
-<blockquote>
-<p>参考地址：</p>
-<p><a href="https://blog.csdn.net/u011334621/article/details/78506404">https://blog.csdn.net/u011334621/article/details/78506404</a></p>
-<p><a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -699,46 +699,6 @@
       <tags>
         <tag>cmd</tag>
         <tag>转载</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>监督学习和无监督学习</title>
-    <url>/post/62c7e70.html</url>
-    <content><![CDATA[<p><strong>是否有监督（supervised），就看输入数据是否有标签（label）。输入数据有标签，则为有监督学习，没标签则为无监督学习</strong></p>
-<span id="more"></span>
-<p>这里我参考网络资料将机器学习分为；有监督学习、无监督学习、半监督学习和强化学习四类。</p>
-<h1 id="有监督学习"><a href="#有监督学习" class="headerlink" title="有监督学习"></a>有监督学习</h1><ol>
-<li><p>分类（classification）：<br>输入的训练数据有特征（feature），有标签（label）。<br>所谓的学习，其本质就是<strong>找到特征和标签间的关系（mapping）</strong>。从而给定新的特征，得出器相应的分类结果即标签。</p>
-</li>
-<li><p>回归（regression）：<br>其数据集是给定一个函数和它的一些坐标点，然后通过回归分析的算法，来估计原函数的模型，<strong>求出一个最符合这些已知数据集的函数，从而预测未知输入的输出值</strong>。</p>
-</li>
-</ol>
-<p>分类和回归的主要区别就是输出结果是离散的还是连续的。</p>
-<h1 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h1><p>聚类：把相似的东西聚在一起，并不需要知道类别是什么<br><strong>训练数据是无标签的，训练目标是能对数据进行区分和界定</strong></p>
-<h1 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h1><p>是监督学习与无监督学习相结合的一种学习方法。半监督学习使用大量的未标记数据，以及同时使用标记数据，来进行模式识别工作。</p>
-<p>它主要考虑如何<strong>利用少量的标注样本和大量的未标注样本进行训练和分类</strong>的问题。主要分为半监督分类，半监督回归，半监督聚类和半监督降维算法。</p>
-<h1 id="强化学习（reinforcement-learning）"><a href="#强化学习（reinforcement-learning）" class="headerlink" title="强化学习（reinforcement learning）"></a>强化学习（reinforcement learning）</h1><p>摘自：<a href="https://easyai.tech/ai-definition/reinforcement-learning/">https://easyai.tech/ai-definition/reinforcement-learning/</a><br>强化学习算法的思路非常简单，以游戏为例，如果在游戏中采取某种策略可以取得较高的得分，那么就进一步「强化」这种策略，以期继续取得较好的结果。这种策略与日常生活中的各种「绩效奖励」非常类似。我们平时也常常用这样的策略来提高自己的游戏水平。</p>
-<p>在 Flappy bird 这个游戏中，我们需要简单的点击操作来控制小鸟，躲过各种水管，飞的越远越好，因为飞的越远就能获得更高的积分奖励。</p>
-<p>这就是一个典型的强化学习场景：</p>
-<pre><code>机器有一个明确的小鸟角色——代理
-需要控制小鸟飞的更远——目标
-整个游戏过程中需要躲避各种水管——环境
-躲避水管的方法是让小鸟用力飞一下——行动
-飞的越远，就会获得越多的积分——奖励
-</code></pre>
-<p>强化学习和监督学习、无监督学习 最大的不同就是不需要大量的“数据喂养”。而是<strong>通过自己不停的尝试来学会某些技能。</strong></p>
-<pre><code>参考
-https://www.zhihu.com/question/23194489
-https://easyai.tech/ai-definition/如reinforcement-learning
-</code></pre>
-]]></content>
-      <categories>
-        <category>算法</category>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>DL</tag>
-        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1293,6 +1253,46 @@ https://easyai.tech/ai-definition/如reinforcement-learning
       <tags>
         <tag>转载</tag>
         <tag>嵌入式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>监督学习和无监督学习</title>
+    <url>/post/62c7e70.html</url>
+    <content><![CDATA[<p><strong>是否有监督（supervised），就看输入数据是否有标签（label）。输入数据有标签，则为有监督学习，没标签则为无监督学习</strong></p>
+<span id="more"></span>
+<p>这里我参考网络资料将机器学习分为；有监督学习、无监督学习、半监督学习和强化学习四类。</p>
+<h1 id="有监督学习"><a href="#有监督学习" class="headerlink" title="有监督学习"></a>有监督学习</h1><ol>
+<li><p>分类（classification）：<br>输入的训练数据有特征（feature），有标签（label）。<br>所谓的学习，其本质就是<strong>找到特征和标签间的关系（mapping）</strong>。从而给定新的特征，得出器相应的分类结果即标签。</p>
+</li>
+<li><p>回归（regression）：<br>其数据集是给定一个函数和它的一些坐标点，然后通过回归分析的算法，来估计原函数的模型，<strong>求出一个最符合这些已知数据集的函数，从而预测未知输入的输出值</strong>。</p>
+</li>
+</ol>
+<p>分类和回归的主要区别就是输出结果是离散的还是连续的。</p>
+<h1 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h1><p>聚类：把相似的东西聚在一起，并不需要知道类别是什么<br><strong>训练数据是无标签的，训练目标是能对数据进行区分和界定</strong></p>
+<h1 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h1><p>是监督学习与无监督学习相结合的一种学习方法。半监督学习使用大量的未标记数据，以及同时使用标记数据，来进行模式识别工作。</p>
+<p>它主要考虑如何<strong>利用少量的标注样本和大量的未标注样本进行训练和分类</strong>的问题。主要分为半监督分类，半监督回归，半监督聚类和半监督降维算法。</p>
+<h1 id="强化学习（reinforcement-learning）"><a href="#强化学习（reinforcement-learning）" class="headerlink" title="强化学习（reinforcement learning）"></a>强化学习（reinforcement learning）</h1><p>摘自：<a href="https://easyai.tech/ai-definition/reinforcement-learning/">https://easyai.tech/ai-definition/reinforcement-learning/</a><br>强化学习算法的思路非常简单，以游戏为例，如果在游戏中采取某种策略可以取得较高的得分，那么就进一步「强化」这种策略，以期继续取得较好的结果。这种策略与日常生活中的各种「绩效奖励」非常类似。我们平时也常常用这样的策略来提高自己的游戏水平。</p>
+<p>在 Flappy bird 这个游戏中，我们需要简单的点击操作来控制小鸟，躲过各种水管，飞的越远越好，因为飞的越远就能获得更高的积分奖励。</p>
+<p>这就是一个典型的强化学习场景：</p>
+<pre><code>机器有一个明确的小鸟角色——代理
+需要控制小鸟飞的更远——目标
+整个游戏过程中需要躲避各种水管——环境
+躲避水管的方法是让小鸟用力飞一下——行动
+飞的越远，就会获得越多的积分——奖励
+</code></pre>
+<p>强化学习和监督学习、无监督学习 最大的不同就是不需要大量的“数据喂养”。而是<strong>通过自己不停的尝试来学会某些技能。</strong></p>
+<pre><code>参考
+https://www.zhihu.com/question/23194489
+https://easyai.tech/ai-definition/如reinforcement-learning
+</code></pre>
+]]></content>
+      <categories>
+        <category>算法</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>DL</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
 </search>
