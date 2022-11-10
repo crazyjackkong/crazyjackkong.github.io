@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World!</title>
-    <url>/post/1c291ca3.html</url>
-    <content><![CDATA[<p>这里是crazyjackong的个人博客，开启于2018年3月17日。<br>欢迎各位客官！！</p>
-]]></content>
-      <categories>
-        <category>搭建博客</category>
-      </categories>
-      <tags>
-        <tag>实验</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HEXO命令</title>
     <url>/post/f3f4fea1.html</url>
     <content><![CDATA[<p>方便查阅</p>
@@ -23,66 +11,15 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Linux 源码安装及卸载</title>
-    <url>/post/b01d34de.html</url>
-    <content><![CDATA[<h2 id="1-源码的安装"><a href="#1-源码的安装" class="headerlink" title="1. 源码的安装"></a>1. 源码的安装</h2><p>源码安装的步骤大致分为四步：下载（download）、配置（configure）、编译（make）、安装（make install）。</p>
-<span id="more"></span>
-
-<ol>
-<li><p>下载</p>
-<p>下载源码的方式有许多，记录使用过的几个</p>
-<ol>
-<li><p>git 下载，已知源码的 github 地址可以执行</p>
-<p><code>git clone 地址</code></p>
-<p>下载，可以直接将源码文件夹下载至本地。</p>
-</li>
-<li><p>直接自行下载源码的压缩包，并解压</p>
-<p>eg以<code>.tar</code>后缀的可以用<code>tar -xzf</code>命令解压</p>
-</li>
-<li><p>wget 下载：支持FTP及HTTP协议下载支持断点续传及代理服务器下载</p>
-</li>
-</ol>
-</li>
-<li><p>配置</p>
-<p><strong>在源码目录执行<code>./configure --prefix=PATH  #PATH为自定义安装目录</code></strong></p>
-<p>configure文件是一个可执行的脚本文件，它有很多选项，在待安装的源码目录下使用命令.&#x2F;configure –help可以输出详细的选项列表。</p>
-<p>其中–prefix选项是配置安装目录，如果不配置该选项，安装后可执行文件默认放在&#x2F;usr  &#x2F;local&#x2F;bin，库文件默认放在&#x2F;usr&#x2F;local&#x2F;lib，配置文件默认放在&#x2F;usr&#x2F;local&#x2F;etc，其它的资源文件放在&#x2F;usr  &#x2F;local&#x2F;share，比较凌乱。</p>
-<p>如果配置了–prefix，如：</p>
-<p><code>$ ./configure --prefix=/usr/local/test</code></p>
-<p>安装后的所有资源文件都会被放在&#x2F;usr&#x2F;local&#x2F;test目录中，不会分散到其他目录。</p>
-<p>使用–prefix选项的另一个好处是方便卸载软件或移植软件；当某个安装的软件不再需要时，只须简单的删除该安装目录，就可以把软件卸载得干干净净；而移植软件只需拷贝整个目录到另外一个机器即可（相同的操作系统下）。</p>
-<p>综上：**强烈建议配置 <code>--prefix</code>方便后期移植及卸载</p>
-</li>
-<li><p>编译</p>
-<p><strong>执行<code>make</code></strong></p>
-</li>
-<li><p>安装</p>
-<p>**执行&#96;make install</p>
-<p>为了记录安装详情方便后期，可输出安装日志，具体命令如下</p>
-<p>make &gt;&amp; LOG_make &amp;<br>make install &gt;&amp; LOG_install &amp;</p>
-</li>
-</ol>
-<h2 id="2-通过源码安装软件的卸载"><a href="#2-通过源码安装软件的卸载" class="headerlink" title="2. 通过源码安装软件的卸载"></a>2. 通过源码安装软件的卸载</h2><ol>
-<li><p>如果configure时配置了 –prefix 则可以直接通过rm</p>
-</li>
-<li><p>如果源码包提供了make uninstall ，则可以通过在源码目录下执行<code>make uninstall</code>命令卸载</p>
-</li>
-<li><p>如果没有配置–prefix选项，源码包也没有提供make uninstall，则可以通过以下方式可以完整卸载：  </p>
-<p>找一个临时目录重新安装一遍，如：<br>  <code>$ ./configure --prefix=/tmp/to_remove &amp;&amp; make install</code></p>
-<p>然后遍历&#x2F;tmp&#x2F;to_remove的文件，删除对应安装位置的文件即可（因为&#x2F;tmp&#x2F;to_remove里的目录结构就是没有配置–prefix选项时的目录结构）。</p>
-</li>
-</ol>
-<blockquote>
-<p>参考地址：</p>
-<p><a href="https://blog.csdn.net/u011334621/article/details/78506404">https://blog.csdn.net/u011334621/article/details/78506404</a></p>
-<p><a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a></p>
-</blockquote>
+    <title>Hello World!</title>
+    <url>/post/1c291ca3.html</url>
+    <content><![CDATA[<p>这里是crazyjackong的个人博客，开启于2018年3月17日。<br>欢迎各位客官！！</p>
 ]]></content>
       <categories>
-        <category>学习</category>
+        <category>搭建博客</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>实验</tag>
       </tags>
   </entry>
   <entry>
@@ -224,6 +161,69 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux 源码安装及卸载</title>
+    <url>/post/b01d34de.html</url>
+    <content><![CDATA[<h2 id="1-源码的安装"><a href="#1-源码的安装" class="headerlink" title="1. 源码的安装"></a>1. 源码的安装</h2><p>源码安装的步骤大致分为四步：下载（download）、配置（configure）、编译（make）、安装（make install）。</p>
+<span id="more"></span>
+
+<ol>
+<li><p>下载</p>
+<p>下载源码的方式有许多，记录使用过的几个</p>
+<ol>
+<li><p>git 下载，已知源码的 github 地址可以执行</p>
+<p><code>git clone 地址</code></p>
+<p>下载，可以直接将源码文件夹下载至本地。</p>
+</li>
+<li><p>直接自行下载源码的压缩包，并解压</p>
+<p>eg以<code>.tar</code>后缀的可以用<code>tar -xzf</code>命令解压</p>
+</li>
+<li><p>wget 下载：支持FTP及HTTP协议下载支持断点续传及代理服务器下载</p>
+</li>
+</ol>
+</li>
+<li><p>配置</p>
+<p><strong>在源码目录执行<code>./configure --prefix=PATH  #PATH为自定义安装目录</code></strong></p>
+<p>configure文件是一个可执行的脚本文件，它有很多选项，在待安装的源码目录下使用命令.&#x2F;configure –help可以输出详细的选项列表。</p>
+<p>其中–prefix选项是配置安装目录，如果不配置该选项，安装后可执行文件默认放在&#x2F;usr  &#x2F;local&#x2F;bin，库文件默认放在&#x2F;usr&#x2F;local&#x2F;lib，配置文件默认放在&#x2F;usr&#x2F;local&#x2F;etc，其它的资源文件放在&#x2F;usr  &#x2F;local&#x2F;share，比较凌乱。</p>
+<p>如果配置了–prefix，如：</p>
+<p><code>$ ./configure --prefix=/usr/local/test</code></p>
+<p>安装后的所有资源文件都会被放在&#x2F;usr&#x2F;local&#x2F;test目录中，不会分散到其他目录。</p>
+<p>使用–prefix选项的另一个好处是方便卸载软件或移植软件；当某个安装的软件不再需要时，只须简单的删除该安装目录，就可以把软件卸载得干干净净；而移植软件只需拷贝整个目录到另外一个机器即可（相同的操作系统下）。</p>
+<p>综上：**强烈建议配置 <code>--prefix</code>方便后期移植及卸载</p>
+</li>
+<li><p>编译</p>
+<p><strong>执行<code>make</code></strong></p>
+</li>
+<li><p>安装</p>
+<p>**执行&#96;make install</p>
+<p>为了记录安装详情方便后期，可输出安装日志，具体命令如下</p>
+<p>make &gt;&amp; LOG_make &amp;<br>make install &gt;&amp; LOG_install &amp;</p>
+</li>
+</ol>
+<h2 id="2-通过源码安装软件的卸载"><a href="#2-通过源码安装软件的卸载" class="headerlink" title="2. 通过源码安装软件的卸载"></a>2. 通过源码安装软件的卸载</h2><ol>
+<li><p>如果configure时配置了 –prefix 则可以直接通过rm</p>
+</li>
+<li><p>如果源码包提供了make uninstall ，则可以通过在源码目录下执行<code>make uninstall</code>命令卸载</p>
+</li>
+<li><p>如果没有配置–prefix选项，源码包也没有提供make uninstall，则可以通过以下方式可以完整卸载：  </p>
+<p>找一个临时目录重新安装一遍，如：<br>  <code>$ ./configure --prefix=/tmp/to_remove &amp;&amp; make install</code></p>
+<p>然后遍历&#x2F;tmp&#x2F;to_remove的文件，删除对应安装位置的文件即可（因为&#x2F;tmp&#x2F;to_remove里的目录结构就是没有配置–prefix选项时的目录结构）。</p>
+</li>
+</ol>
+<blockquote>
+<p>参考地址：</p>
+<p><a href="https://blog.csdn.net/u011334621/article/details/78506404">https://blog.csdn.net/u011334621/article/details/78506404</a></p>
+<p><a href="https://www.zhihu.com/question/20092756">https://www.zhihu.com/question/20092756</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git 笔记</title>
     <url>/post/17766adb.html</url>
     <content><![CDATA[<p>参照以下链接进行的学习：<br><a href="https://learngitbranching.js.org/?NODEMO=&amp;locale=zh_CN">https://learngitbranching.js.org/?NODEMO=&amp;locale=zh_CN</a></p>
@@ -243,73 +243,6 @@
         <category>学习</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《爱的艺术》思维导图</title>
-    <url>/post/1822a02.html</url>
-    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>　　<strong>爱不是一种只需投入身心就可获得的感情</strong>，如果不努力发展自己的全部人格并以此达到一种创造倾向性，那么每种爱的试图都会失败；如果没有爱他人的能力，如果不能真正勇敢地、真诚地、有纪律地爱他人，那么人们在自己的爱情生活中也永远得不到满足。不信，每个人都可以问问自己，你确实见过多少真正有能力爱的人呢？</p>
-<span id="more"></span>
-
-
-<h1 id="我的看法"><a href="#我的看法" class="headerlink" title="我的看法"></a>我的看法</h1><p>　　我当初打算看这本书的原因可以说就是被这本书的书名吸引了————“爱的艺术”。为什么爱可以被称为一种艺术？爱不是一种人与生俱来的天性吗？当爱成为一种艺术，那会是什么样？<br>    当我看完这本书，我最大的感受就是————<strong>爱，是一门一生的艺术。</strong><br>只有先明白爱的艺术，才能真正拥抱爱。</p>
-<h1 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h1>
-<p><a href="https://pan.baidu.com/s/1WE4qv54ZbuLPV_QVy6uADA">百度网盘点击下载</a>密码：ibuz</p>
-<h1 id="本书简介"><a href="#本书简介" class="headerlink" title="本书简介"></a>本书简介</h1><img src="/post/1822a02.htm/1822a02/fengpi.jpg" class title="封面">
-<blockquote>
-<p>　　这本书必定会使所有期望从这本书得到掌握爱的艺术秘诀的读者大失所望。恰恰相反，这本书要告诉读者，<br><strong>爱情不是一种与人的成熟程度无关 ，只需要投入身心的感情。</strong><br>这本书要说服读者：如果不努力发展自己的全部人格并以此达到一种创造倾向性，那么每种爱的试图都会失败；如果没有爱他人的能力，如果不能真正谦恭地、勇敢地、真诚地和有纪律地爱他人，那么人们在自己的爱情生活中也永远得不到满足。每个人都可以问问自己，你确实见过多少真正有能力爱的人呢？</p>
-</blockquote>
-<h1 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h1><p>Fromm，Erich（1900～1980）<br>德国精神病学家，新精神分析学家,是精神分析学派的代表人物之一。1922年获海德堡大学哲学博士学位。次年入慕尼黑大学研究精神分析，并在柏林精神分析学院接受训练。1929年在法兰克福精神分析学院和法兰克福大学任教。1934年移居美国。先后任教于哥伦比亚大学、耶鲁大学、密歇根州立大学。弗罗姆十分重视人与社会的关系的研究。他承认人的生物性，但更强调人的社会性，认为人的本质是由文化的或社会的因素而不是生物的因素决定的。人在现代社会中普遍具有孤独感，这是人在社会中达到个性化的必然结果。为了医治病态社会，他提出通过改善人的心理，解决有关人们的劳动组织与社会的相互关系的问题，建立一个友爱、互助、没有孤独感的理想社会。著有《逃避自由》、《精神分析与宗教》、《论健全的社会》、《人类破坏性的分析》等。</p>
-<p>艾·弗罗姆把心理学视为是人性之自我理解这一久远努力的延续。当运用人类学与社会学的洞见以拓展来自临床、心理分析和精神病学研究的知识之时，弗罗姆充分地汲取思想史的养料，并提醒他的读者：以往的伦理思索者乃是哲学家以及心理学家。弗罗姆在基本观点上是一个弗洛伊德主义者，且显示出弗洛伊德见解的广度与深度。他同时强调了弗洛伊德思想的开放性实质，因而避免了教条主义，并且能面对他最初的思想源泉仍然保持极有意义的游刃有余。 尽管弗罗姆著有许多著作，但《逃避自由》是他最著名的一本。在此书中他论证，正如不能离开对文化内容的解释去理解个人一样，要理解社会过程同样不能不懂得作用于个人的心理过程。“前个人主义社会”给个人以安全，但严重地限制了个人的自由发展。自中世纪的封建秩序解体之后，人已摆脱了传统的束缚，但他并没有在他个人自我实现的积极意义上获得自由。个人主义的历史发展已提供幸福的许多可能，但今天的个人必须有内在勇气去激发他全部的潜能，否则他就会寻求在限制自我的新的依赖形式中逃避他的自由。外界限制的根除不足以使人有积极的自由：“来”（from）自于什么的自由可能是个前提，但“去”（to）创造争取的自由对于人的成长是基本的。法西斯政权的兴起以援引在民主手段、经济秩序或政治欺诈中的经验不足来解释是不能令人满意的，它置根于普及于人民大众的许多内在观点之中。</p>
-<p>弗洛姆创立以关于人的处境的学说为基础的人本主义精神分析，注重分析一定的经济结构对人的影响，提出社会性格及社会潜意识论，认为这些是联系经济基础与意识形态的中介环节，并强调社会心理在社会进程中的作用。他试图据此解释现代西方人的困境及精神危机，就此提出社会改革论。</p>
-<h1 id="书籍下载"><a href="#书籍下载" class="headerlink" title="书籍下载"></a>书籍下载</h1><p><a href="https://pan.baidu.com/s/1AGHjTKu_kqkWdMuaPkMe_g">百度网盘点击下载</a>密码：562r</p>
-]]></content>
-      <categories>
-        <category>思维导图</category>
-      </categories>
-      <tags>
-        <tag>思维导图</tag>
-        <tag>读书</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>监督学习和无监督学习</title>
-    <url>/post/62c7e70.html</url>
-    <content><![CDATA[<p><strong>是否有监督（supervised），就看输入数据是否有标签（label）。输入数据有标签，则为有监督学习，没标签则为无监督学习</strong></p>
-<span id="more"></span>
-<p>这里我参考网络资料将机器学习分为；有监督学习、无监督学习、半监督学习和强化学习四类。</p>
-<h1 id="有监督学习"><a href="#有监督学习" class="headerlink" title="有监督学习"></a>有监督学习</h1><ol>
-<li><p>分类（classification）：<br>输入的训练数据有特征（feature），有标签（label）。<br>所谓的学习，其本质就是<strong>找到特征和标签间的关系（mapping）</strong>。从而给定新的特征，得出器相应的分类结果即标签。</p>
-</li>
-<li><p>回归（regression）：<br>其数据集是给定一个函数和它的一些坐标点，然后通过回归分析的算法，来估计原函数的模型，<strong>求出一个最符合这些已知数据集的函数，从而预测未知输入的输出值</strong>。</p>
-</li>
-</ol>
-<p>分类和回归的主要区别就是输出结果是离散的还是连续的。</p>
-<h1 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h1><p>聚类：把相似的东西聚在一起，并不需要知道类别是什么<br><strong>训练数据是无标签的，训练目标是能对数据进行区分和界定</strong></p>
-<h1 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h1><p>是监督学习与无监督学习相结合的一种学习方法。半监督学习使用大量的未标记数据，以及同时使用标记数据，来进行模式识别工作。</p>
-<p>它主要考虑如何<strong>利用少量的标注样本和大量的未标注样本进行训练和分类</strong>的问题。主要分为半监督分类，半监督回归，半监督聚类和半监督降维算法。</p>
-<h1 id="强化学习（reinforcement-learning）"><a href="#强化学习（reinforcement-learning）" class="headerlink" title="强化学习（reinforcement learning）"></a>强化学习（reinforcement learning）</h1><p>摘自：<a href="https://easyai.tech/ai-definition/reinforcement-learning/">https://easyai.tech/ai-definition/reinforcement-learning/</a><br>强化学习算法的思路非常简单，以游戏为例，如果在游戏中采取某种策略可以取得较高的得分，那么就进一步「强化」这种策略，以期继续取得较好的结果。这种策略与日常生活中的各种「绩效奖励」非常类似。我们平时也常常用这样的策略来提高自己的游戏水平。</p>
-<p>在 Flappy bird 这个游戏中，我们需要简单的点击操作来控制小鸟，躲过各种水管，飞的越远越好，因为飞的越远就能获得更高的积分奖励。</p>
-<p>这就是一个典型的强化学习场景：</p>
-<pre><code>机器有一个明确的小鸟角色——代理
-需要控制小鸟飞的更远——目标
-整个游戏过程中需要躲避各种水管——环境
-躲避水管的方法是让小鸟用力飞一下——行动
-飞的越远，就会获得越多的积分——奖励
-</code></pre>
-<p>强化学习和监督学习、无监督学习 最大的不同就是不需要大量的“数据喂养”。而是<strong>通过自己不停的尝试来学会某些技能。</strong></p>
-<pre><code>参考
-https://www.zhihu.com/question/23194489
-https://easyai.tech/ai-definition/如reinforcement-learning
-</code></pre>
-]]></content>
-      <categories>
-        <category>算法</category>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>DL</tag>
         <tag>笔记</tag>
       </tags>
   </entry>
@@ -766,6 +699,73 @@ https://easyai.tech/ai-definition/如reinforcement-learning
       <tags>
         <tag>cmd</tag>
         <tag>转载</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>监督学习和无监督学习</title>
+    <url>/post/62c7e70.html</url>
+    <content><![CDATA[<p><strong>是否有监督（supervised），就看输入数据是否有标签（label）。输入数据有标签，则为有监督学习，没标签则为无监督学习</strong></p>
+<span id="more"></span>
+<p>这里我参考网络资料将机器学习分为；有监督学习、无监督学习、半监督学习和强化学习四类。</p>
+<h1 id="有监督学习"><a href="#有监督学习" class="headerlink" title="有监督学习"></a>有监督学习</h1><ol>
+<li><p>分类（classification）：<br>输入的训练数据有特征（feature），有标签（label）。<br>所谓的学习，其本质就是<strong>找到特征和标签间的关系（mapping）</strong>。从而给定新的特征，得出器相应的分类结果即标签。</p>
+</li>
+<li><p>回归（regression）：<br>其数据集是给定一个函数和它的一些坐标点，然后通过回归分析的算法，来估计原函数的模型，<strong>求出一个最符合这些已知数据集的函数，从而预测未知输入的输出值</strong>。</p>
+</li>
+</ol>
+<p>分类和回归的主要区别就是输出结果是离散的还是连续的。</p>
+<h1 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h1><p>聚类：把相似的东西聚在一起，并不需要知道类别是什么<br><strong>训练数据是无标签的，训练目标是能对数据进行区分和界定</strong></p>
+<h1 id="半监督学习"><a href="#半监督学习" class="headerlink" title="半监督学习"></a>半监督学习</h1><p>是监督学习与无监督学习相结合的一种学习方法。半监督学习使用大量的未标记数据，以及同时使用标记数据，来进行模式识别工作。</p>
+<p>它主要考虑如何<strong>利用少量的标注样本和大量的未标注样本进行训练和分类</strong>的问题。主要分为半监督分类，半监督回归，半监督聚类和半监督降维算法。</p>
+<h1 id="强化学习（reinforcement-learning）"><a href="#强化学习（reinforcement-learning）" class="headerlink" title="强化学习（reinforcement learning）"></a>强化学习（reinforcement learning）</h1><p>摘自：<a href="https://easyai.tech/ai-definition/reinforcement-learning/">https://easyai.tech/ai-definition/reinforcement-learning/</a><br>强化学习算法的思路非常简单，以游戏为例，如果在游戏中采取某种策略可以取得较高的得分，那么就进一步「强化」这种策略，以期继续取得较好的结果。这种策略与日常生活中的各种「绩效奖励」非常类似。我们平时也常常用这样的策略来提高自己的游戏水平。</p>
+<p>在 Flappy bird 这个游戏中，我们需要简单的点击操作来控制小鸟，躲过各种水管，飞的越远越好，因为飞的越远就能获得更高的积分奖励。</p>
+<p>这就是一个典型的强化学习场景：</p>
+<pre><code>机器有一个明确的小鸟角色——代理
+需要控制小鸟飞的更远——目标
+整个游戏过程中需要躲避各种水管——环境
+躲避水管的方法是让小鸟用力飞一下——行动
+飞的越远，就会获得越多的积分——奖励
+</code></pre>
+<p>强化学习和监督学习、无监督学习 最大的不同就是不需要大量的“数据喂养”。而是<strong>通过自己不停的尝试来学会某些技能。</strong></p>
+<pre><code>参考
+https://www.zhihu.com/question/23194489
+https://easyai.tech/ai-definition/如reinforcement-learning
+</code></pre>
+]]></content>
+      <categories>
+        <category>算法</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>DL</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《爱的艺术》思维导图</title>
+    <url>/post/1822a02.html</url>
+    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>　　<strong>爱不是一种只需投入身心就可获得的感情</strong>，如果不努力发展自己的全部人格并以此达到一种创造倾向性，那么每种爱的试图都会失败；如果没有爱他人的能力，如果不能真正勇敢地、真诚地、有纪律地爱他人，那么人们在自己的爱情生活中也永远得不到满足。不信，每个人都可以问问自己，你确实见过多少真正有能力爱的人呢？</p>
+<span id="more"></span>
+
+
+<h1 id="我的看法"><a href="#我的看法" class="headerlink" title="我的看法"></a>我的看法</h1><p>　　我当初打算看这本书的原因可以说就是被这本书的书名吸引了————“爱的艺术”。为什么爱可以被称为一种艺术？爱不是一种人与生俱来的天性吗？当爱成为一种艺术，那会是什么样？<br>    当我看完这本书，我最大的感受就是————<strong>爱，是一门一生的艺术。</strong><br>只有先明白爱的艺术，才能真正拥抱爱。</p>
+<h1 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h1>
+<p><a href="https://pan.baidu.com/s/1WE4qv54ZbuLPV_QVy6uADA">百度网盘点击下载</a>密码：ibuz</p>
+<h1 id="本书简介"><a href="#本书简介" class="headerlink" title="本书简介"></a>本书简介</h1><img src="/post/1822a02.htm/1822a02/fengpi.jpg" class title="封面">
+<blockquote>
+<p>　　这本书必定会使所有期望从这本书得到掌握爱的艺术秘诀的读者大失所望。恰恰相反，这本书要告诉读者，<br><strong>爱情不是一种与人的成熟程度无关 ，只需要投入身心的感情。</strong><br>这本书要说服读者：如果不努力发展自己的全部人格并以此达到一种创造倾向性，那么每种爱的试图都会失败；如果没有爱他人的能力，如果不能真正谦恭地、勇敢地、真诚地和有纪律地爱他人，那么人们在自己的爱情生活中也永远得不到满足。每个人都可以问问自己，你确实见过多少真正有能力爱的人呢？</p>
+</blockquote>
+<h1 id="作者简介"><a href="#作者简介" class="headerlink" title="作者简介"></a>作者简介</h1><p>Fromm，Erich（1900～1980）<br>德国精神病学家，新精神分析学家,是精神分析学派的代表人物之一。1922年获海德堡大学哲学博士学位。次年入慕尼黑大学研究精神分析，并在柏林精神分析学院接受训练。1929年在法兰克福精神分析学院和法兰克福大学任教。1934年移居美国。先后任教于哥伦比亚大学、耶鲁大学、密歇根州立大学。弗罗姆十分重视人与社会的关系的研究。他承认人的生物性，但更强调人的社会性，认为人的本质是由文化的或社会的因素而不是生物的因素决定的。人在现代社会中普遍具有孤独感，这是人在社会中达到个性化的必然结果。为了医治病态社会，他提出通过改善人的心理，解决有关人们的劳动组织与社会的相互关系的问题，建立一个友爱、互助、没有孤独感的理想社会。著有《逃避自由》、《精神分析与宗教》、《论健全的社会》、《人类破坏性的分析》等。</p>
+<p>艾·弗罗姆把心理学视为是人性之自我理解这一久远努力的延续。当运用人类学与社会学的洞见以拓展来自临床、心理分析和精神病学研究的知识之时，弗罗姆充分地汲取思想史的养料，并提醒他的读者：以往的伦理思索者乃是哲学家以及心理学家。弗罗姆在基本观点上是一个弗洛伊德主义者，且显示出弗洛伊德见解的广度与深度。他同时强调了弗洛伊德思想的开放性实质，因而避免了教条主义，并且能面对他最初的思想源泉仍然保持极有意义的游刃有余。 尽管弗罗姆著有许多著作，但《逃避自由》是他最著名的一本。在此书中他论证，正如不能离开对文化内容的解释去理解个人一样，要理解社会过程同样不能不懂得作用于个人的心理过程。“前个人主义社会”给个人以安全，但严重地限制了个人的自由发展。自中世纪的封建秩序解体之后，人已摆脱了传统的束缚，但他并没有在他个人自我实现的积极意义上获得自由。个人主义的历史发展已提供幸福的许多可能，但今天的个人必须有内在勇气去激发他全部的潜能，否则他就会寻求在限制自我的新的依赖形式中逃避他的自由。外界限制的根除不足以使人有积极的自由：“来”（from）自于什么的自由可能是个前提，但“去”（to）创造争取的自由对于人的成长是基本的。法西斯政权的兴起以援引在民主手段、经济秩序或政治欺诈中的经验不足来解释是不能令人满意的，它置根于普及于人民大众的许多内在观点之中。</p>
+<p>弗洛姆创立以关于人的处境的学说为基础的人本主义精神分析，注重分析一定的经济结构对人的影响，提出社会性格及社会潜意识论，认为这些是联系经济基础与意识形态的中介环节，并强调社会心理在社会进程中的作用。他试图据此解释现代西方人的困境及精神危机，就此提出社会改革论。</p>
+<h1 id="书籍下载"><a href="#书籍下载" class="headerlink" title="书籍下载"></a>书籍下载</h1><p><a href="https://pan.baidu.com/s/1AGHjTKu_kqkWdMuaPkMe_g">百度网盘点击下载</a>密码：562r</p>
+]]></content>
+      <categories>
+        <category>思维导图</category>
+      </categories>
+      <tags>
+        <tag>思维导图</tag>
+        <tag>读书</tag>
       </tags>
   </entry>
   <entry>
