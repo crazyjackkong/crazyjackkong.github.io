@@ -1280,7 +1280,6 @@ https://easyai.tech/ai-definition/如reinforcement-learning
 <li>在需要转换的文章中，通过Ctrl-P 并输入 <code>upload all image</code>回车即可完成上传和替换操作</li>
 </ol>
 <h3 id="文章同步至Hexo"><a href="#文章同步至Hexo" class="headerlink" title="文章同步至Hexo"></a>文章同步至Hexo</h3><p>参考 <a href="https://zhaohongxuan.github.io/2022/05/03/How%20to%20write%20blog%20in%20obsidian%20and%20publish%20to%20hexo%20blog/">文章</a> 采用shell 脚本的方式: 拷贝对应文件到Hexo 目录，并执行Hexo 预览和发布命令，shell 脚本可以通过QuickAdd 插件进行快速访问</p>
-<p>D:\Obisidian&#x2F;01-Diary&#x2F;��������&#x2F;obsidian not exis<br>D:\Obisidian&#x2F;01-Diary&#x2F;��������&#x2F;obsidian not exist!<br>    file D:\Obisidian&#x2F;01-Diary&#x2F;��������&#x2F;obsidian not exist!<br>    file D:\Obisidian&#x2F;01-Diary&#x2F;��������&#x2F;obsidian not exist!<br>[‘.&#x2F;08-Assets&#x2F;Scripts&#x2F;deploy_hexo.py’, ‘D:\Obisidian&#x2F;01-Diary&#x2F;��������&#x2F;obsidian’, ‘��’, ‘hexo’, ‘workflow’, ‘���.md’]<br>file D:\Obisidian&#x2F;01-Diary&#x2F;��������&#x2F;obsidian��hexoworkflow not exist!<br>file D:\Obisidian&#x2F;01-Diary&#x2F;��������&#x2F;obsidian��hexoworkflow���.md not exist!<br>file  not exist!<br>copy D:\Obisidian&#x2F;01-Diary&#x2F;��������&#x2F;obsidian �� hexo workflow ���.md -&gt; D:\Hexo\hexo\source_posts\obsidian �� hexo workflow ���.md</p>
 ]]></content>
   </entry>
 </search>
