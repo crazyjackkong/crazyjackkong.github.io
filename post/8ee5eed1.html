@@ -25,10 +25,15 @@
 <meta property="og:site_name" content="Crazyjackkong">
 <meta property="og:description" content="为啥要做？做完后有何收获感想体会？">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/11/23/rx1pjMNRLaBVStb.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/23/oTDla7Us4fwVBk3.png">
 <meta property="article:published_time" content="2022-11-18T11:45:57.000Z">
-<meta property="article:modified_time" content="2022-11-23T02:42:00.811Z">
+<meta property="article:modified_time" content="2022-11-23T07:18:59.482Z">
 <meta property="article:author" content="Crazyjackkong">
+<meta property="article:tag" content="测试">
+<meta property="article:tag" content="测试2">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/11/23/rx1pjMNRLaBVStb.png">
 
 
 <link rel="canonical" href="https://crazyjackkong.github.io/post/8ee5eed1.html">
@@ -118,7 +123,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.</span> <span class="nav-text">图片批量上传图床</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%90%8C%E6%AD%A5%E8%87%B3Hexo"><span class="nav-number">2.</span> <span class="nav-text">文章同步至Hexo</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9B%BE%E7%89%87%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.</span> <span class="nav-text">1. 图片批量上传图床</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%96%87%E7%AB%A0%E5%90%8C%E6%AD%A5%E8%87%B3Hexo"><span class="nav-number">2.</span> <span class="nav-text">2. 文章同步至Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-python-%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99"><span class="nav-number">2.1.</span> <span class="nav-text">2.1. python 脚本编写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-obsidian-%E5%9F%BA%E4%BA%8Etemplater-%E5%92%8C-quickadd-%E6%8F%92%E4%BB%B6%E6%89%A7%E8%A1%8Cpython%E8%84%9A%E6%9C%AC"><span class="nav-number">2.2.</span> <span class="nav-text">2.2. obsidian 基于templater 和 quickadd 插件执行python脚本</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -138,12 +143,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -214,7 +219,16 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-23 10:42:00" itemprop="dateModified" datetime="2022-11-23T10:42:00+08:00">2022-11-23</time>
+      <time title="修改时间：2022-11-23 15:18:59" itemprop="dateModified" datetime="2022-11-23T15:18:59+08:00">2022-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">测试</span></a>
+        </span>
     </span>
 
   
@@ -231,14 +245,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>509</span>
+      <span>2.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -250,14 +264,27 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>参考<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/554333805">https://zhuanlan.zhihu.com/p/554333805</a><br><a target="_blank" rel="noopener" href="https://zhaohongxuan.github.io/2022/05/03/How%20to%20write%20blog%20in%20obsidian%20and%20publish%20to%20hexo%20blog/">https://zhaohongxuan.github.io/2022/05/03/How%20to%20write%20blog%20in%20obsidian%20and%20publish%20to%20hexo%20blog/</a></p>
-<h3 id="图片批量上传图床"><a href="#图片批量上传图床" class="headerlink" title="图片批量上传图床"></a>图片批量上传图床</h3><p>要想方便文章在Hexo 上的发布和 Obsidian 源文件的管理，最先要解决的就是图片存储的问题<br>最方便的莫过于将图片上传至图床中</p>
+<h3 id="1-图片批量上传图床"><a href="#1-图片批量上传图床" class="headerlink" title="1. 图片批量上传图床"></a>1. 图片批量上传图床</h3><p>要想方便文章在Hexo 上的发布和 Obsidian 源文件的管理，最先要解决的就是图片存储的问题<br>最方便的莫过于将图片上传至图床中</p>
 <p>在Obisidian 中通过  <a target="_blank" rel="noopener" href="https://github.com/renmu123/obsidian-image-auto-upload-plugin#obsidian-image-auto-upload-plugin">Obsidian Image Auto Upload Plugin</a> 和 PicGo 客户端完成对文章内所有图片上传图床并替换链接的操作</p>
 <ol>
 <li>安装PicGo 并配置好图床</li>
 <li>下载仓库的release版本压缩包<br> 解压到obidian 仓库目录下的 .obsidian/plugins 下，并在设置中启用插件</li>
 <li>在需要转换的文章中，通过Ctrl-P 并输入 <code>upload all image</code>回车即可完成上传和替换操作</li>
 </ol>
-<h3 id="文章同步至Hexo"><a href="#文章同步至Hexo" class="headerlink" title="文章同步至Hexo"></a>文章同步至Hexo</h3><p>参考 <a target="_blank" rel="noopener" href="https://zhaohongxuan.github.io/2022/05/03/How%20to%20write%20blog%20in%20obsidian%20and%20publish%20to%20hexo%20blog/">文章</a> 采用shell 脚本的方式: 拷贝对应文件到Hexo 目录，并执行Hexo 预览和发布命令，shell 脚本可以通过QuickAdd 插件进行快速访问</p>
+<h3 id="2-文章同步至Hexo"><a href="#2-文章同步至Hexo" class="headerlink" title="2. 文章同步至Hexo"></a>2. 文章同步至Hexo</h3><p>参考 <a target="_blank" rel="noopener" href="https://zhaohongxuan.github.io/2022/05/03/How%20to%20write%20blog%20in%20obsidian%20and%20publish%20to%20hexo%20blog/">文章</a> 采用shell 脚本的方式: 拷贝对应文件到Hexo 目录，并执行Hexo 预览和发布命令，python 脚本可以通过QuickAdd 插件进行快速访问</p>
+<h4 id="2-1-python-脚本编写"><a href="#2-1-python-脚本编写" class="headerlink" title="2.1. python 脚本编写"></a>2.1. python 脚本编写</h4><p>具体代码如下</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys, os, shutil</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">from</span> utils <span class="keyword">import</span> fetch_front_matter, rewrite_front_matter</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">cp_post_to_hexo_dir</span>(<span class="params">src_post_file, hexo_dir = <span class="string">'D:\\Hexo\\hexo\\source\\_posts\\'</span></span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.isfile(src_post_file):</span><br><span class="line">        <span class="built_in">print</span> (<span class="string">"file %s not exist!"</span>%(src_post_file))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        fpath,fname=os.path.split(src_post_file)             <span class="comment"># 分离文件名和路径</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(hexo_dir):</span><br><span class="line">            <span class="built_in">print</span> (<span class="string">"dir %s not exist!"</span>%(hexo_dir))                     <span class="comment"># 创建路径</span></span><br><span class="line">        shutil.copy(src_post_file, hexo_dir + fname)          <span class="comment"># 复制文件</span></span><br><span class="line">    <span class="keyword">return</span> hexo_dir + fname</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(sys.argv) &lt; <span class="number">2</span>:</span><br><span class="line">        sys.exit(<span class="string">"python error"</span>)</span><br><span class="line">    src_post_file = <span class="string">''</span></span><br><span class="line">    <span class="comment"># 由于文件名可能包含单个空格，</span></span><br><span class="line">    <span class="comment"># 接收的第1到最后一个参数合并为原始文件路径</span></span><br><span class="line">    <span class="keyword">for</span> path_str <span class="keyword">in</span> sys.argv[<span class="number">1</span>::]:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> src_post_file  == <span class="string">''</span>:</span><br><span class="line">            path_str = <span class="string">' '</span> + path_str</span><br><span class="line">        src_post_file += path_str</span><br><span class="line">	<span class="comment"># 拷贝文件</span></span><br><span class="line">    dst_post_path = cp_post_to_hexo_dir(src_post_file)</span><br><span class="line">    <span class="comment"># 解析原始文件的front-matter 信息</span></span><br><span class="line">    old_post_front_matter = fetch_front_matter(dst_post_path)</span><br><span class="line">    <span class="comment"># 修改front-matter 信息</span></span><br><span class="line">    old_post_front_matter[<span class="string">'categories'</span>] = old_post_front_matter[<span class="string">'tags'</span>].split(<span class="string">' '</span>)[<span class="number">0</span>]</span><br><span class="line">    old_post_front_matter[<span class="string">'copyright'</span>] = <span class="string">'true'</span></span><br><span class="line">    old_post_front_matter[<span class="string">'comments'</span>] = <span class="string">'true'</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        old_post_front_matter.pop(<span class="string">'obsidianUIMode'</span>)</span><br><span class="line">        old_post_front_matter.pop(<span class="string">'destination'</span>)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    old_post_front_matter[<span class="string">'tags'</span>] = <span class="string">'\n\t- '</span> + <span class="string">'\n\t- '</span>.join(old_post_front_matter[<span class="string">'tags'</span>].split(<span class="string">' '</span>))</span><br><span class="line">    rewrite_front_matter(dst_post_path, old_post_front_matter)</span><br><span class="line">    <span class="comment"># Windows Shell 完成hexo 的生成和部署</span></span><br><span class="line">    preview_cmd = <span class="string">'cd /d D:\\Hexo\\hexo &amp;&amp; hexo g &amp;&amp; hexo d'</span></span><br><span class="line">    p = subprocess.Popen(preview_cmd,shell=<span class="literal">True</span>,stdout=subprocess.PIPE)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<p>主要进行了三件事：</p>
+<ol>
+<li>拷贝接收到的markdown 文件到hexo post 路径</li>
+<li>python 解析并修改 front-matter 以适配hexo post</li>
+<li>基于subprocess 执行cmd 命令进行Hexo 静态网页的生成和部署</li>
+</ol>
+<h4 id="2-2-obsidian-基于templater-和-quickadd-插件执行python脚本"><a href="#2-2-obsidian-基于templater-和-quickadd-插件执行python脚本" class="headerlink" title="2.2. obsidian 基于templater 和 quickadd 插件执行python脚本"></a>2.2. obsidian 基于templater 和 quickadd 插件执行python脚本</h4><p>将上述文件保存为 obisidian 自定义脚本目录下的文件 </p>
+<ol>
+<li>templater 插件添加 脚本执行接口<br> 调用python 执行前文的 python 脚本<br><img src="https://s2.loli.net/2022/11/23/rx1pjMNRLaBVStb.png"></li>
+<li>quickadd 插件快速调用templater 接口<br>quickadd 添加 Capture 格式的快捷方式<br>并进行如下设置<br><img src="https://s2.loli.net/2022/11/23/oTDla7Us4fwVBk3.png"></li>
+</ol>
 
     </div>
 
@@ -297,6 +324,10 @@
 </ul>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag"># 测试</a>
+              <a href="/tags/%E6%B5%8B%E8%AF%952/" rel="tag"># 测试2</a>
+          </div>
 
         
 
@@ -342,13 +373,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">49k</span>
+    <span title="站点总字数">51k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">45 分钟</span>
+    <span title="站点阅读时长">46 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
